@@ -100,6 +100,13 @@
    photo: ../../images/neighbors/harada_yuto.png
    xUrl: "https://x.com/HYuto30325"
 
+ - name: 滝川 皇
+   affiliation: --
+   photo: ../../images/neighbors/takigawa_mikoto.png
+   xUrl: "https://x.com/takimiko_gohan"
+   linkedInUrl : "https://www.linkedin.com/in/mikoto-takigawa-baa587373"
+
+
 #  「Linkdin」のアカウントのみあるケース
 # - name: データ ハナコ
 #   affiliation: Data Engineering Inc.
