@@ -106,10 +106,15 @@
   photo: ../../images/neighbors/harada_yuto.png
   xUrl: "https://x.com/HYuto30325"
 
- - name: 横澤 直樹
-   affiliation: 株式会社メディアフォース
-   photo: ../../images/neighbors/naoki_yokozawa.jpeg
-   xUrl: "https://x.com/naoki_yokozawa"
+- name: 横澤 直樹
+  affiliation: 株式会社メディアフォース
+  photo: ../../images/neighbors/naoki_yokozawa.jpeg
+  xUrl: "https://x.com/naoki_yokozawa"
+
+- name: Masaki Moriyama
+  affiliation: --
+  photo: ../../images/neighbors/masaki_moriyama.png
+  xUrl: "https://x.com/masa_tectec?s=11&t=rnW8CmghyqmKbef-4BuvVg"
 
 
 #  「Linkdin」のアカウントのみあるケース
