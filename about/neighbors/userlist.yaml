@@ -120,13 +120,11 @@
   affiliation: 株式会社ロイヤリティマーケティング
   photo: ../../images/neighbors/yoshihiro_shibata.png
 
-
- - name: 滝川 皇
-   affiliation: --
-   photo: ../../images/neighbors/takigawa_mikoto.jpg
-   xUrl: "https://x.com/takimiko_gohan"
-   linkedInUrl : "https://www.linkedin.com/in/mikoto-takigawa-baa587373"
-
+- name: 滝川 皇
+  affiliation: --
+  photo: ../../images/neighbors/takigawa_mikoto.jpg
+  xUrl: "https://x.com/takimiko_gohan"
+  linkedInUrl : "https://www.linkedin.com/in/mikoto-takigawa-baa587373"
 
 - name: Ryo Toshiki
   affiliation : --
