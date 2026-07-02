@@ -128,6 +128,11 @@
    linkedInUrl : "https://www.linkedin.com/in/mikoto-takigawa-baa587373"
 
 
+- name: Ryo Toshiki
+  affiliation : --
+  photo : ../../images/neighbors/t_ryo.jpg
+  xUrl : "https://x.com/tryo_sing"
+
 #  「Linkdin」のアカウントのみあるケース
 # - name: データ ハナコ
 #   affiliation: Data Engineering Inc.
