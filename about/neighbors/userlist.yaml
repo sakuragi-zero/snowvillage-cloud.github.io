@@ -120,6 +120,11 @@
   affiliation: 株式会社ロイヤリティマーケティング
   photo: ../../images/neighbors/yoshihiro_shibata.png
 
+- name: 加藤智也
+  affiliation: --
+  photo: ../../images/neighbors/tomoya_kato.png
+  linkedInUrl: "https://www.linkedin.com/in/tomoya-kato-466875394"
+
 
 #  「Linkdin」のアカウントのみあるケース
 # - name: データ ハナコ
