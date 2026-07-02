@@ -77,6 +77,12 @@
   xUrl : "https://x.com/baihebu"
   linkedInUrl : "https://www.linkedin.com/in/atsushi-kamiya-93584571"
 
+- name: 中山 晋一
+  affiliation : 株式会社電通総研
+  photo : ../../images/neighbors/nakayama_shinichi.jpg
+  xUrl : "https://x.com/datashin360"
+  linkedInUrl : "https://www.linkedin.com/in/shinichi-nakayama-280902191/"
+
 - name: アスタ
   affiliation: --
   photo: ../../images/neighbors/tsunoda_katsuma.png
@@ -104,6 +110,7 @@
    affiliation: 株式会社メディアフォース
    photo: ../../images/neighbors/naoki_yokozawa.jpeg
    xUrl: "https://x.com/naoki_yokozawa"
+
 
 #  「Linkdin」のアカウントのみあるケース
 # - name: データ ハナコ
