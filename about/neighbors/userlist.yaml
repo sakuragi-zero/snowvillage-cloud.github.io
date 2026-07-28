@@ -131,6 +131,11 @@
   photo : ../../images/neighbors/t_ryo.jpg
   xUrl : "https://x.com/tryo_sing"
 
+- name: Yuta Hishinuma
+  affiliation: ちゅらデータ株式会社
+  photo: ../../images/neighbors/yuta_hishinuma.jpg
+  xUrl: "https://x.com/foursue"
+
 #  「Linkdin」のアカウントのみあるケース
 # - name: データ ハナコ
 #   affiliation: Data Engineering Inc.
