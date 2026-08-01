@@ -136,11 +136,18 @@
   photo : ../../images/neighbors/t_ryo.jpg
   xUrl : "https://x.com/tryo_sing"
 
+- name: 田代 学 
+  affiliation : ちゅらデータ株式会社
+  photo : ../../images/neighbors/gaku_tashiro.jpg
+  xUrl : "https://x.com/gak_t12"
+  linkedInUrl : "https://www.linkedin.com/in/gakut12/"
+
 - name: Yuta Hishinuma
   affiliation: ちゅらデータ株式会社
   photo: ../../images/neighbors/yuta_hishinuma.jpg
   xUrl: "https://x.com/foursue"
   
+
 
 #  「Linkdin」のアカウントのみあるケース
 # - name: データ ハナコ
