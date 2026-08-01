@@ -120,6 +120,11 @@
   affiliation: 株式会社ロイヤリティマーケティング
   photo: ../../images/neighbors/yoshihiro_shibata.png
 
+- name: 加藤智也
+  affiliation: --
+  photo: ../../images/neighbors/tomoya_kato.png
+  linkedInUrl: "https://www.linkedin.com/in/tomoya-kato-466875394"
+
 - name: 滝川 皇
   affiliation: --
   photo: ../../images/neighbors/takigawa_mikoto.jpg
@@ -136,6 +141,13 @@
   photo : ../../images/neighbors/gaku_tashiro.jpg
   xUrl : "https://x.com/gak_t12"
   linkedInUrl : "https://www.linkedin.com/in/gakut12/"
+
+- name: Yuta Hishinuma
+  affiliation: ちゅらデータ株式会社
+  photo: ../../images/neighbors/yuta_hishinuma.jpg
+  xUrl: "https://x.com/foursue"
+  
+
 
 #  「Linkdin」のアカウントのみあるケース
 # - name: データ ハナコ
