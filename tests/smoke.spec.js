@@ -31,14 +31,21 @@ for (const path of PAGES) {
     const consoleErrors = [];
     const brokenResources = [];
 
+    // /join/ のように自サイトから即座に外部サイトへリダイレクトするページでは、
+    // 遷移後は完全に第三者のページ（third-party制御外のJS）になるため、
+    // その時点で自オリジンを離れていたらコンソールエラーの対象外にする。
+    const isOnOwnOrigin = () => page.url().startsWith(baseURL);
+
     page.on("console", (msg) => {
       // "Failed to load resource" はURL情報を持たないため個別に扱わず、
       // response/requestfailed イベント側で同一オリジンかどうかを判定する
-      if (msg.type() === "error" && !RESOURCE_FAILURE_PATTERN.test(msg.text())) {
+      if (msg.type() === "error" && !RESOURCE_FAILURE_PATTERN.test(msg.text()) && isOnOwnOrigin()) {
         consoleErrors.push(msg.text());
       }
     });
-    page.on("pageerror", (err) => consoleErrors.push(err.message));
+    page.on("pageerror", (err) => {
+      if (isOnOwnOrigin()) consoleErrors.push(err.message);
+    });
 
     page.on("response", (res) => {
       if (res.url().startsWith(baseURL) && res.status() >= 400 && !EXPECTED_404_PATTERN.test(res.url())) {
