@@ -136,6 +136,11 @@
   photo : ../../images/neighbors/t_ryo.jpg
   xUrl : "https://x.com/tryo_sing"
 
+  - name: Kazuya Iwata
+  affiliation : DATUM STUDIO株式会社
+  photo : ../../images/neighbors/iwata.png
+  xUrl : --
+
 - name: 田代 学 
   affiliation : ちゅらデータ株式会社
   photo : ../../images/neighbors/gaku_tashiro.jpg
