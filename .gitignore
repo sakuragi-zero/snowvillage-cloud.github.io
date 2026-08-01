@@ -1,2 +1,7 @@
 .DS_Store
 idea/
+
+# Node / チェックツールチェーン
+node_modules/
+playwright-report/
+test-results/

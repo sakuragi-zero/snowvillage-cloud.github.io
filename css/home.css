@@ -30,6 +30,30 @@
   animation: crystal_fall 55s linear infinite;
 }
 
+/* --- 🌟 0. 季節バナー（月替わり生成画像）🌟 --- */
+/* JS (applySeasonalHero) が対象月の画像を検出したときだけ .is-active が付き、
+   グリッド/レーザー演出の"下"・雪結晶背景の"上"にフェードインする。
+   画像が無い月は透明のまま＝既存の雪結晶背景がそのまま見える。 */
+.hero-seasonal-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  z-index: 0;
+}
+.hero-seasonal-bg.is-active {
+  opacity: 0.5;
+}
+/* 画像の上に薄いダークグラデーションを重ね、テキストパネルの可読性を確保 */
+.hero-seasonal-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.35) 0%, rgba(2, 6, 23, 0.75) 100%);
+}
+
 /* --- 🌟 1. 3Dサイバーグリッド（床面）🌟 --- */
 .hero::before {
   content: '';

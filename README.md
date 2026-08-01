@@ -51,3 +51,20 @@ Snowflake ユーザーコミュニティ「SnowVillage」のポータルサイ�
 
 ### 新規ページ
 スタイルは `css/新規ページ名.css` を作成して読み込む。共通スタイルを汚さず、ページ単位で分離する原則を守る。
+
+### 季節バナーの更新（トップページ・ヒーロー背景）
+`images/seasonal/hero-YYYY-MM.jpg` を配置するだけで、該当月になるとトップページの背景に自動で重なる（コード変更不要）。命名規則・推奨サイズは `images/seasonal/README.md` を参照。対象月の画像が無い場合は既存の雪結晶背景にフォールバックする。
+
+## 開発・デプロイ前チェック
+
+このリポジトリはビルド不要の静的サイトだが、デプロイ前チェック用に Node ツールチェーンを同梱している。
+
+```bash
+npm install
+npm run check   # HTML/CSS/JS lint + 季節バナー画像サイズ + リンク切れ + コンソールエラー検知（PC/モバイル）
+```
+
+- `npm run check` は GitHub Actions の CI (`.github/workflows/ci.yml`) と全く同じコマンドで、PR作成前にローカル/Codespace で先に赤信号を潰せる。
+- GitHub Codespaces で開く場合は `.devcontainer/devcontainer.json` により依存関係とPlaywrightのブラウザが自動セットアップされる。
+- `npm run test:smoke` は PR テンプレートの「コンソールに赤いエラーが出ていないか」「PC/モバイル両幅でレイアウト崩れがないか」の手動チェックを自動化したもの（Playwright）。
+- CI/CD の全体設計（マージ後の自動デプロイ・Actionsディスパッチからのロールバック）は、GitHub Pages のデプロイ方式を「ブランチデプロイ」から「GitHub Actions」に切り替える権限が必要なため、現時点では未導入（保留中）。切り替え後に `deploy.yml` を追加する想定。

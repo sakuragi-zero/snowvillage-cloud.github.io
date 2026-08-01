@@ -1,0 +1,28 @@
+{
+  "name": "snowvillage-site",
+  "private": true,
+  "type": "module",
+  "description": "SnowVillage 公式サイト（静的HTML/CSS/JS）のデプロイ前チェック用ツールチェーン",
+  "scripts": {
+    "serve": "serve . -l 8080",
+    "lint:html": "html-validate .",
+    "lint:css": "stylelint \"css/**/*.css\" \"style.css\"",
+    "lint:js": "eslint \"script.js\" \"*Data.js\" \"**/*Data.js\"",
+    "lint:images": "node scripts/check-image-size.mjs",
+    "check:links": "start-server-and-test serve http://localhost:8080 \"node scripts/check-links.mjs\"",
+    "test:smoke": "start-server-and-test serve http://localhost:8080 \"playwright test\"",
+    "check": "npm run lint:html && npm run lint:css && npm run lint:js && npm run lint:images && npm run check:links && npm run test:smoke"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@playwright/test": "^1.48.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "html-validate": "^8.24.0",
+    "linkinator": "^6.1.2",
+    "serve": "^14.2.3",
+    "start-server-and-test": "^2.0.8",
+    "stylelint": "^16.9.0",
+    "stylelint-config-recommended": "^14.0.1"
+  }
+}

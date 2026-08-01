@@ -26,6 +26,7 @@
     <div id="header-container"></div>
 
     <div class="hero">
+      <div class="hero-seasonal-bg" aria-hidden="true"></div>
       <div class="hero-content container hero-split">
         <div class="hero-logo">
           <img src="images/brand/logo-white.png" alt="SnowVillage" />
@@ -110,6 +111,7 @@
     <script>
       renderHeader(".", "home");
       renderFooter();
+      applySeasonalHero();
 
       window.addEventListener("DOMContentLoaded", () => {
         if (typeof loadLatestNews === "function") {

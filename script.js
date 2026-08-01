@@ -34,6 +34,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// --- 🌟 季節バナー（トップページのヒーロー背景に月替わり画像を重ねる） ---
+// images/seasonal/hero-YYYY-MM.jpg が存在する月だけ自動的に重ねて表示する。
+// 存在しない場合は何もせず、既存の雪結晶背景（デフォルト）のまま。
+const SEASONAL_IMAGE_EXTENSIONS = ["jpg", "png"];
+
+const applySeasonalHero = () => {
+  const hero = document.querySelector(".hero");
+  const seasonalBg = document.querySelector(".hero-seasonal-bg");
+  if (!hero || !seasonalBg) return;
+
+  const now = new Date();
+  const yyyymm = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+
+  const tryExtension = (index) => {
+    if (index >= SEASONAL_IMAGE_EXTENSIONS.length) return;
+    const path = `images/seasonal/hero-${yyyymm}.${SEASONAL_IMAGE_EXTENSIONS[index]}`;
+    const probe = new Image();
+    probe.onload = () => {
+      seasonalBg.style.backgroundImage = `url("${path}")`;
+      seasonalBg.classList.add("is-active");
+    };
+    probe.onerror = () => tryExtension(index + 1);
+    probe.src = path;
+  };
+
+  tryExtension(0);
+};
+
 // --- ハンバーガーメニュー制御 ---
 const initNav = () => {
   const burger = document.querySelector(".burger");
