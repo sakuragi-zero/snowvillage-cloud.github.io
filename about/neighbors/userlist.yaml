@@ -125,6 +125,22 @@
   photo: ../../images/neighbors/tomoya_kato.png
   linkedInUrl: "https://www.linkedin.com/in/tomoya-kato-466875394"
 
+- name: 滝川 皇
+  affiliation: --
+  photo: ../../images/neighbors/takigawa_mikoto.jpg
+  xUrl: "https://x.com/takimiko_gohan"
+  linkedInUrl : "https://www.linkedin.com/in/mikoto-takigawa-baa587373"
+
+- name: Ryo Toshiki
+  affiliation : --
+  photo : ../../images/neighbors/t_ryo.jpg
+  xUrl : "https://x.com/tryo_sing"
+
+- name: Yuta Hishinuma
+  affiliation: ちゅらデータ株式会社
+  photo: ../../images/neighbors/yuta_hishinuma.jpg
+  xUrl: "https://x.com/foursue"
+  
 
 #  「Linkdin」のアカウントのみあるケース
 # - name: データ ハナコ
