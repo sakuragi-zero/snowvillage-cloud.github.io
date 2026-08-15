@@ -39,13 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
 // 存在しない場合は何もせず、既存の雪結晶背景（デフォルト）のまま。
 const SEASONAL_IMAGE_EXTENSIONS = ["jpg", "png"];
 
+// Codespace/ローカルで実際の日付を待たずに他の月の見た目を確認できるよう、
+// ?season=YYYY-MM をURLに付けると強制的にその月として扱う（本番運用には影響しない）。
+const getSeasonalYearMonth = () => {
+  const override = new URLSearchParams(window.location.search).get("season");
+  if (override && /^\d{4}-(0[1-9]|1[0-2])$/.test(override)) return override;
+
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+};
+
 const applySeasonalHero = () => {
   const hero = document.querySelector(".hero");
   const seasonalBg = document.querySelector(".hero-seasonal-bg");
   if (!hero || !seasonalBg) return;
 
-  const now = new Date();
-  const yyyymm = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+  const yyyymm = getSeasonalYearMonth();
 
   const tryExtension = (index) => {
     if (index >= SEASONAL_IMAGE_EXTENSIONS.length) return;
