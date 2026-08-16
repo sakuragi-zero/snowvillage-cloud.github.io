@@ -1,5 +1,49 @@
+// --- トップページの季節Hero背景 ---
+// テスト終了後に null へ戻すと、実際の日付判定に切り替わる。
+const SEASONAL_HERO_TEST_DATE = null;
+
+const initSeasonalHero = () => {
+  const hero = document.querySelector("[data-seasonal-hero]");
+  if (!hero) return;
+
+  const basePath = hero.dataset.seasonalBase?.replace(/\/$/, "");
+  if (!basePath) return;
+
+  const targetDate = SEASONAL_HERO_TEST_DATE ? new Date(SEASONAL_HERO_TEST_DATE) : new Date();
+  const japanDateParts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+  }).formatToParts(targetDate);
+  const year = japanDateParts.find(({ type }) => type === "year")?.value;
+  const month = japanDateParts.find(({ type }) => type === "month")?.value;
+
+  if (!year || !month) return;
+
+  const imagePath = `${basePath}/hero-${year}-${month}.webp`;
+  const imageUrl = new URL(imagePath, document.baseURI).href;
+  const seasonalImage = new Image();
+  seasonalImage.decoding = "async";
+  seasonalImage.fetchPriority = "high";
+
+  seasonalImage.addEventListener(
+    "load",
+    () => {
+      // CSS変数を外部CSSから使用しても参照起点がずれないよう、絶対URLを渡す。
+      hero.style.setProperty("--seasonal-hero-image", `url("${imageUrl}")`);
+      hero.classList.add("hero--seasonal");
+    },
+    { once: true },
+  );
+
+  // 該当月の画像がない場合は、CSSの既存背景をそのまま使用する。
+  seasonalImage.src = imageUrl;
+};
+
 // --- 🌟 ページ読み込み完了時の処理を一元管理 ---
 document.addEventListener("DOMContentLoaded", () => {
+  initSeasonalHero();
+
   // 🌟 追加：ヘッダーのスクロール連動エフェクト
   window.addEventListener("scroll", () => {
     const header = document.querySelector("header");

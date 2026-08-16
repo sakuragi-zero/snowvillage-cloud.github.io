@@ -30,6 +30,23 @@
   animation: crystal_fall 55s linear infinite;
 }
 
+/* 該当月のWebPが読み込めたときだけ、季節背景に切り替える */
+.hero.hero--seasonal {
+  background-image:
+    linear-gradient(to bottom, rgba(2, 6, 23, 0.28), rgba(2, 6, 23, 0.52)),
+    var(--seasonal-hero-image);
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  animation: none;
+}
+
+/* 季節画像の構図を活かすため、既存のグリッドと光線は重ねない */
+.hero.hero--seasonal::before,
+.hero.hero--seasonal::after {
+  display: none;
+}
+
 /* --- 🌟 1. 3Dサイバーグリッド（床面）🌟 --- */
 .hero::before {
   content: '';
@@ -380,4 +397,3 @@
 /* --- 🌟 最新News用点滅パルスアイコン --- */
 
 /* 旧パルス（位置ずれの原因）は廃止し、NEWバッジに置換。残った装飾はバッジに集約 */
-
