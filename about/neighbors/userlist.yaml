@@ -154,6 +154,11 @@
   
 
 
+- name: Yuji Matsumoto
+  affiliation: AI×データの技術系コンサル
+  photo: ../../images/neighbors/yuji_matsumoto.png
+  xUrl: "https://x.com/ym_tech_info"
+
 #  「Linkdin」のアカウントのみあるケース
 # - name: データ ハナコ
 #   affiliation: Data Engineering Inc.
