@@ -100,7 +100,7 @@ const sponsorsData = [
   {
     name: "Kazuya Iwata",
     desc: "Data Engineer",
-    logo: "../images/sponsors/iwata.png",
+    logo: "../images/sponsors/iwata.webp",
     department: "サイト維持管理",
   },
   {
