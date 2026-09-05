@@ -104,8 +104,8 @@ const sponsorsData = [
     department: "サイト維持管理",
   },
   {
-    name: "Haruki Murakoshi", // TODO: 実際の氏名に変更
-    desc: "AI Engineer / Data Engineer", // TODO: 実際の肩書き・所属に変更
+    name: "Haruki Murakoshi",
+    desc: "AI Engineer / Data Engineer",
     logo: "../images/sponsors/haruki_murakoshi.webp",
     department: "サイト維持管理",
   },
