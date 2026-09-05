@@ -1,6 +1,10 @@
 {
   "name": "SnowVillage Static Site",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "postCreateCommand": "npm install",
   "forwardPorts": [8080],
   "portsAttributes": {
     "8080": {
