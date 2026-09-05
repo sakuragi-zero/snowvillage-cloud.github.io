@@ -1,15 +1,17 @@
 {
   "name": "SnowVillage Static Site",
-  "build": {
-    "dockerfile": "Dockerfile"
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
   },
-  "workspaceFolder": "/workspaces/snowvillage-cloud.github.io",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/snowvillage-cloud.github.io,type=bind,consistency=cached",
   "forwardPorts": [8080],
   "portsAttributes": {
     "8080": {
       "label": "SnowVillage Website",
       "onAutoForward": "openPreview"
     }
+  },
+  "postAttachCommand": {
+    "show-instructions": "echo; echo '=================================================='; echo ' SnowVillage サイトをプレビューするには:'; echo ' 下のコマンドをこのターミナルにコピーして実行してください'; echo; echo '   npx --yes http-server . -p 8080 -c-1'; echo; echo ' 実行後、下部「ポート」タブに 8080 が表示され'; echo ' 自動でプレビューが開きます。'; echo '=================================================='; echo"
   }
 }
