@@ -1,16 +1,15 @@
 {
   "name": "SnowVillage Static Site",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "forwardPorts": [5500],
-  "portsAttributes": {
-    "5500": {
-      "label": "SnowVillage Website (Live Server)",
-      "onAutoForward": "openPreview"
-    }
+  "build": {
+    "dockerfile": "Dockerfile"
   },
-  "customizations": {
-    "vscode": {
-      "extensions": ["ritwickdey.LiveServer"]
+  "workspaceFolder": "/workspaces/snowvillage-cloud.github.io",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/snowvillage-cloud.github.io,type=bind,consistency=cached",
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "SnowVillage Website",
+      "onAutoForward": "openPreview"
     }
   }
 }
