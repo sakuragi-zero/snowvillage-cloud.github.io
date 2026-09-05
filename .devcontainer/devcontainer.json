@@ -1,0 +1,22 @@
+{
+  "name": "SnowVillage Static Site",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "SnowVillage Website",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postAttachCommand": {
+    "start-server": "npx --yes http-server . -p 8080 -c-1 -s"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ritwickdey.LiveServer"]
+    }
+  }
+}
