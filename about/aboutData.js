@@ -98,9 +98,9 @@ const sponsorsData = [
     department: "サイト維持管理",
   },
   {
-    name: "サイト管理者A（仮）", // TODO: 実際の氏名に変更
-    desc: "肩書き・所属を入力してください", // TODO: 実際の肩書き・所属に変更
-    logo: "../images/sponsors/site_maintainer_a.png", // TODO: images/sponsors/ に写真を配置してパスを変更
+    name: "Kazuya Iwata",
+    desc: "Data Engineer",
+    logo: "../images/sponsors/iwata.png",
     department: "サイト維持管理",
   },
   {
